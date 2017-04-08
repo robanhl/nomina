@@ -24,13 +24,13 @@ app.get('/', function (req, res) {
 })
 
 // for facebook verification
-app.get('/webhook/', function (req, res) {
-	if (req.query['hub.verify_token'] === '12345') {
-		res.send(req.query['hub.challenge'])
-	} else {
-		res.send('Error, wrong token')
-	}
-})
+app.get('/webhook', function (req, res) {
+    if (req.query['hub.verify_token'] === '123456') {
+        res.send(req.query['hub.challenge']);
+    } else {
+        res.send('Invalid verify token');
+    }
+});
 
 // to post data
 app.post('/webhook/', function (req, res) {
@@ -59,7 +59,7 @@ app.post('/webhook/', function (req, res) {
 
 // recommended to inject access tokens as environmental variables, e.g.
 // const token = process.env.FB_PAGE_ACCESS_TOKEN
-const token = "EAAVZCi6vyjxUBAJGHuzpojpmF2khjZBqpweQbfDPksrtlqbDAPnT9uQXfcmEYYIHN63uj0SVJDicA5qIr9eo6iJq4Dfgn9wcBkzXydauHqTNgh43G3atZBykNNoY4cKnstHpRH3dxNW2hGziKWqfQaqdLbCWbifx2yY0374NwZDZD"
+const token = "EAAELDLdkZBtkBAOvnGd9aRHTUqBDCn5evxRLCrhAucqJvAPTO8lB4lZCIpz221os8dYumGRDlDTwK06oUjKq6BgJzkf4YVuZApZAUiY9zxNTnIdvFOwNk5jGquhWToJzcjj9kQ5BZCWpgGi5bwRcGWUUyvsnBUoswZC2WAwM9x6QZDZD"
 
 function sendTextMessage(sender, text) {
 	let messageData = { text:text }
