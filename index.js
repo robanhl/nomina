@@ -9,7 +9,7 @@ app.listen((process.env.PORT || 3000));
 
 // Server frontpage
 app.get('/', function (req, res) {
-    res.send('233410515');
+    res.send('23341d0515');
 });
 
 // Facebook Webhook
