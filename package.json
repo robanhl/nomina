@@ -1,0 +1,16 @@
+{
+  "name": "nomina",
+  "version": "1.0.0",
+  "description": "Finance bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "no"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "request": "^2.81.0"
+  }
+}
